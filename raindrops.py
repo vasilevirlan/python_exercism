@@ -1,17 +1,7 @@
 def convert(number):
-    if number % 3 == 0 and number % 5 == 0 and number % 7 == 0:
-        return 'PlingPlangPlong'
-    elif number % 3 == 0 and number % 5 == 0:
-        return 'PlingPlang'
-    elif number % 3 == 0 and number % 7 == 0:
-        return'PlingPlong'
-    elif number % 5 == 0 and number % 7 == 0:
-        return 'PlangPlong'
-    elif number % 3 == 0:
-        return 'Pling'
-    elif number % 5 == 0:
-        return 'Plang'
-    elif number % 7 == 0:
-        return 'Plong'
-    else:
-        return str(number)
+    result = ''
+    if number % 3 == 0: result += 'Pling' # Against PEP8, but less lines :)
+    if number % 5 == 0: result += 'Plang'
+    if number % 7 == 0: result += 'Plong'
+    return result or str(number)
+
